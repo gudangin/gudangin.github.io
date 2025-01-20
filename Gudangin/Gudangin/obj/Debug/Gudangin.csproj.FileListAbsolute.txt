@@ -1,0 +1,10 @@
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.exe.config
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.exe
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.pdb
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.Properties.Resources.resources
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.MainApp.resources
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.exe
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.pdb
