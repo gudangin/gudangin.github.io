@@ -11,3 +11,17 @@ C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\G
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.pdb
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormLogin.resources
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormTransaksi.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.exe.config
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.exe
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Gudangin.pdb
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.AssemblyReference.cache
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.Properties.Resources.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormBarang.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormLogin.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormTransaksi.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.MainApp.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.Start.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.GenerateResource.cache
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.CoreCompileInputs.cache
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.exe
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.pdb

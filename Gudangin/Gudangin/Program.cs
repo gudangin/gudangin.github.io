@@ -18,7 +18,8 @@ namespace Gudangin
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Start());
-            Application.Run(new FormLogin());
+            Application.Run(new FormBarang());
+            //Application.Run(new FormLogin());
             //Application.Run(new MainApp());
         }
     }
