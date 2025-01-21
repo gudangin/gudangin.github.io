@@ -21,6 +21,7 @@ namespace Gudangin.view
         {
             panelStats.Height = buttonBarang.Height;
             panelStats.Top = buttonBarang.Top;
+            panelDataBarang.Visible = true;
 
         }
 
@@ -28,7 +29,11 @@ namespace Gudangin.view
         {
             panelStats.Height = buttonTransaksi.Height;
             panelStats.Top = buttonTransaksi.Top;
-
+            panelDataBarang.Visible = false;
+            this.Hide();
+            FormTransaksi formTransaksi = new FormTransaksi();
+            formTransaksi.ShowDialog();
+            this.Close();
         }
 
         private void buttonLaporan_Click(object sender, EventArgs e)

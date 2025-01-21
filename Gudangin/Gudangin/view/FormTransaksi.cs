@@ -16,5 +16,13 @@ namespace Gudangin.view
         {
             InitializeComponent();
         }
+
+        private void buttonBarang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBarang formBarang = new FormBarang();
+            formBarang.ShowDialog();
+            this.Close();
+        }
     }
 }
