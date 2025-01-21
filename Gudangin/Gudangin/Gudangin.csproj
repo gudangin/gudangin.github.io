@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="view\FormLaporan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,13 @@
     </Compile>
     <Compile Include="view\FormTransaksi.Designer.cs">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
+=======
+    <Compile Include="view\FormBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormBarang.Designer.cs">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+>>>>>>> 604367f8920a427931b8f345a64d4aed234f2f28
     </Compile>
     <Compile Include="view\MainApp.cs">
       <SubType>Form</SubType>
@@ -88,6 +96,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="view\FormLaporan.resx">
       <DependentUpon>FormLaporan.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +105,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FormTransaksi.resx">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="view\FormBarang.resx">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+>>>>>>> 604367f8920a427931b8f345a64d4aed234f2f28
     </EmbeddedResource>
     <EmbeddedResource Include="view\MainApp.resx">
       <DependentUpon>MainApp.cs</DependentUpon>

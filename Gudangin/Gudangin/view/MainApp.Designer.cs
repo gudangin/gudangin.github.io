@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 484);
+            this.ClientSize = new System.Drawing.Size(1056, 606);
             this.Name = "MainApp";
             this.Text = "Gudangin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainApp_FormClosing);
