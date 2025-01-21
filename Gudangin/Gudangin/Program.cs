@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gudangin.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace Gudangin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainApp());
+            Application.Run(new StartUp());
+            Application.Run(new FormLogin());
+            //Application.Run(new FormTransaksi());
         }
     }
 }

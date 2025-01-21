@@ -1,6 +1,6 @@
-﻿namespace Gudangin
+﻿namespace Gudangin.view
 {
-    partial class MainApp
+    partial class FormLaporan
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainApp
+            // FormLaporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 484);
-            this.Name = "MainApp";
-            this.Text = "Gudangin";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainApp_FormClosing);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormLaporan";
+            this.Text = "FormLaporan";
             this.ResumeLayout(false);
 
         }
@@ -45,4 +44,3 @@
         #endregion
     }
 }
-

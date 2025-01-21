@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gudangin
+namespace Gudangin.view
 {
-    public partial class MainApp : Form
+    public partial class FormLogin : Form
     {
-        public MainApp()
+        public FormLogin()
         {
             InitializeComponent();
-        }
-
-        private void MainApp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
