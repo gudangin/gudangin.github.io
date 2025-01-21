@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Gudangin.view
 {
-    public partial class StartUp : Form
+    public partial class Start : Form
     {
-        public StartUp()
+        public Start()
         {
             InitializeComponent();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MainApp mainapp = new MainApp();
+            MainApp mainApp = new MainApp();
             progressBar1.Value += 5;
-            if (progressBar1.Value == 100)
+            if (progressBar1.Value == 100) 
             { 
                 timer1.Dispose();
                 Close();

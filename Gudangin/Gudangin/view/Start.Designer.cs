@@ -1,6 +1,6 @@
 ﻿namespace Gudangin.view
 {
-    partial class StartUp
+    partial class Start
     {
         /// <summary>
         /// Required designer variable.
@@ -29,29 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(311, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GUDANGIN";
+            this.pictureBox1.BackgroundImage = global::Gudangin.Properties.Resources.iventory_removebg_preview;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(776, 353);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(103, 91);
+            this.progressBar1.Location = new System.Drawing.Point(13, 387);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(595, 48);
+            this.progressBar1.Size = new System.Drawing.Size(775, 37);
             this.progressBar1.TabIndex = 1;
             // 
             // timer1
@@ -59,40 +58,26 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Gudangin.Properties.Resources.iventory;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(595, 255);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // StartUp
+            // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "StartUp";
+            this.Name = "Start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

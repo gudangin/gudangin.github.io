@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gudangin.view;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace Gudangin
         private void MainApp_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTransaksi Frmtransaksi = new FormTransaksi();
+            Frmtransaksi.MdiParent = this;
+            Frmtransaksi.Show();
         }
     }
 }

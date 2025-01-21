@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gudangin", "Gudangin\Gudangin.csproj", "{F6ED759B-2F14-42DC-8061-C985F7E26C59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gudangin", "Gudangin\Gudangin.csproj", "{FAFC17F6-9D47-4C7C-8416-28996E176464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6ED759B-2F14-42DC-8061-C985F7E26C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6ED759B-2F14-42DC-8061-C985F7E26C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6ED759B-2F14-42DC-8061-C985F7E26C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6ED759B-2F14-42DC-8061-C985F7E26C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAFC17F6-9D47-4C7C-8416-28996E176464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAFC17F6-9D47-4C7C-8416-28996E176464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAFC17F6-9D47-4C7C-8416-28996E176464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAFC17F6-9D47-4C7C-8416-28996E176464}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B38CBE20-D7F5-4655-99FD-B4722503E8EB}
+		SolutionGuid = {301EE55E-5512-4A0F-98EA-85C3A4BD328E}
 	EndGlobalSection
 EndGlobal

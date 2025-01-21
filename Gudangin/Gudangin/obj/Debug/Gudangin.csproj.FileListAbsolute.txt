@@ -4,10 +4,10 @@ C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\G
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.AssemblyReference.cache
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.Properties.Resources.resources
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.MainApp.resources
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.Start.resources
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.GenerateResource.cache
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.exe
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.pdb
-C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.StartUp.resources
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormLogin.resources
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormTransaksi.resources
