@@ -84,7 +84,7 @@ namespace Gudangin.controller
             {
                 OpenConnection();
                 MySqlCommand cmd = new MySqlCommand(query, kon);
-                return cmd.ExecuteReader(); // Jangan tutup koneksi di sini, biar bisa digunakan di tempat lain
+                return cmd.ExecuteReader(CommandBehavior.CloseConnection); // Koneksi akan tertutup otomatis setelah reader selesai digunakan
             }
             catch (Exception e)
             {

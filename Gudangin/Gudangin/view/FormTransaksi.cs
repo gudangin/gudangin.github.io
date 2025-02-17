@@ -31,16 +31,28 @@ namespace Gudangin.view
 
         private void TampilTransaksi()
         {
-            DataTransaksi.DataSource = koneksi.ShowData("SELECT t_transaksi.id_transaksi, t_barang.nama_barang, t_transaksi.jenis_transaksi, t_transaksi.jumlah, t_transaksi.tanggal FROM t_transaksi JOIN t_barang ON t_transaksi.id_barang = t_barang.id");
-            DataTransaksi.Columns[0].HeaderText = "ID Transaksi";
-            DataTransaksi.Columns[1].HeaderText = "Nama Barang";
-            DataTransaksi.Columns[2].HeaderText = "Jenis Transaksi";
-            DataTransaksi.Columns[3].HeaderText = "Jumlah";
-            DataTransaksi.Columns[4].HeaderText = "Tanggal";
+            DataTable dt = koneksi.ShowData("SELECT t_transaksi.id_transaksi, t_barang.nama_barang, t_transaksi.jenis_transaksi, t_transaksi.jumlah, t_transaksi.tanggal FROM t_transaksi JOIN t_barang ON t_transaksi.id_barang = t_barang.id");
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                DataTransaksi.DataSource = dt;
+                DataTransaksi.Refresh(); // Paksa DataGridView untuk update data
+
+                DataTransaksi.Columns[0].HeaderText = "ID Transaksi";
+                DataTransaksi.Columns[1].HeaderText = "Nama Barang";
+                DataTransaksi.Columns[2].HeaderText = "Jenis Transaksi";
+                DataTransaksi.Columns[3].HeaderText = "Jumlah";
+                DataTransaksi.Columns[4].HeaderText = "Tanggal";
+            }
+            else
+            {
+                MessageBox.Show("Tidak ada data transaksi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTransaksi.DataSource = null;
+            }
         }
         private void LoadBarang()
         {
-            MySqlDataReader reader = koneksi.reader("SELECT nama_barang FROM t_barang");
+            MySqlDataReader reader = koneksi.reader("SELECT id, nama_barang FROM t_barang");
             while (reader.Read())
             {
                 comboBoxNamaBarang.Items.Add(reader["nama_barang"].ToString());
@@ -74,8 +86,16 @@ namespace Gudangin.view
 
             string Jenis_transaksi = comboBoxJenisTransaksi.SelectedItem.ToString();
             string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
-            int Jumlah = int.Parse(tbJumlah.Text);
-            string Tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
+            int Jumlah;
+
+            // Validasi input jumlah agar tidak terjadi error parsing
+            if (!int.TryParse(tbJumlah.Text, out Jumlah))
+            {
+                MessageBox.Show("Jumlah harus berupa angka!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
             // Cek ID barang berdasarkan nama barang
             MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{Nama_barang}'");
@@ -100,17 +120,17 @@ namespace Gudangin.view
                 return;
             }
 
-            // Simpan transaksi
-            //transaksi.id_barang = Id_barang.ToString();
-            //transaksi.jenis_transaksi = Jenis_transaksi;
-            //transaksi.jumlah = Jumlah.ToString();
-            //transaksi.tanggal = Tanggal;
+            // Simpan transaksi ke dalam database
+            m_transaksi.Id_barang = Id_barang.ToString();
+            m_transaksi.Jenis_transaksi = Jenis_transaksi;
+            m_transaksi.Jumlah = Jumlah.ToString();
+            m_transaksi.Tanggal = tanggal;
 
-            //if (transaksi.Insert(transaksi))
-            //{
-            //    ResetForm();
-            //    TampilTransaksi();
-            //}
+            if (transaksi.Insert(m_transaksi))
+            {
+                ResetForm();
+                TampilTransaksi();
+            }
         }
     }
 }

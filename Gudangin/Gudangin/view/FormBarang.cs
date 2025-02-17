@@ -29,10 +29,10 @@ namespace Gudangin.view
         public void Tampil()
         {
             dataGridViewDataBarang.DataSource = koneksi.ShowData("SELECT * FROM t_barang");
-            dataGridViewDataBarang.Columns[0].HeaderText = "id";
-            dataGridViewDataBarang.Columns[1].HeaderText = "nama_barang";
-            dataGridViewDataBarang.Columns[2].HeaderText = "kategori";
-            dataGridViewDataBarang.Columns[3].HeaderText = "stok";
+            dataGridViewDataBarang.Columns[0].HeaderText = "ID";
+            dataGridViewDataBarang.Columns[1].HeaderText = "Nama Barang";
+            dataGridViewDataBarang.Columns[2].HeaderText = "Kategori";
+            dataGridViewDataBarang.Columns[3].HeaderText = "Stok";
         }
 
         public void Reset()
