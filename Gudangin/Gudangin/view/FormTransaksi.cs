@@ -56,21 +56,38 @@ namespace Gudangin.view
 
         private void LoadBarang()
         {
-            MySqlDataReader reader = koneksi.reader("SELECT id, nama_barang FROM t_barang");
+            MessageBox.Show("Memanggil LoadBarang()", "Debug Info");
+
             comboBoxNamaBarang.Items.Clear();
-            barangDict.Clear();
 
-            while (reader.Read())
+            try
             {
-                string Nama_barang = reader["nama_barang"].ToString();
-                int Id_barang = Convert.ToInt32(reader["id"]);
+                koneksi.OpenConnection();
+                MySqlDataReader reader = koneksi.reader("SELECT nama_barang FROM t_barang");
 
-                comboBoxNamaBarang.Items.Add(Nama_barang); // Tambah ke comboBox
-                barangDict[Nama_barang] = Id_barang; // Simpan dalam Dictionary
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string namaBarang = reader.GetString(0); // Menggunakan indeks 0
+                        comboBoxNamaBarang.Items.Add(namaBarang);
+                    }
+
+                    MessageBox.Show("Barang berhasil dimuat: " + comboBoxNamaBarang.Items.Count + " item.", "Debug Info");
+                }
+                else
+                {
+                    MessageBox.Show("Tabel barang kosong!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                reader.Close();
+                koneksi.CloseConnection();
             }
-            reader.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data barang: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
 
         private void ResetForm()
         {
@@ -100,7 +117,6 @@ namespace Gudangin.view
             string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
             int Jumlah;
 
-            // Validasi input jumlah agar tidak terjadi error parsing
             if (!int.TryParse(tbJumlah.Text, out Jumlah))
             {
                 MessageBox.Show("Jumlah harus berupa angka!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -109,30 +125,53 @@ namespace Gudangin.view
 
             string tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
-            // Cek ID barang berdasarkan nama barang
-            MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{Nama_barang}'");
-            int Id_barang = 0, stokSekarang = 0;
+            // Cari ID Barang berdasarkan nama barang
+            koneksi.OpenConnection();
+            MySqlDataReader reader = koneksi.reader($"SELECT id FROM t_barang WHERE nama_barang = '{Nama_barang}'");
 
+            int Id_barang = -1;
             if (reader.Read())
             {
-                Id_barang = Convert.ToInt32(reader["id"]);
-                stokSekarang = Convert.ToInt32(reader["stok"]);
+                Id_barang = reader.GetInt32("id");
             }
             reader.Close();
+            koneksi.CloseConnection();
 
-            if (Id_barang == 0)
+            if (Id_barang == -1)
             {
                 MessageBox.Show("Barang tidak ditemukan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (Jenis_transaksi == "Keluar" && Jumlah > stokSekarang)
+            // Query stok barang jika transaksi adalah "Keluar"
+            int stokSekarang = 0;
+            if (Jenis_transaksi == "Keluar")
             {
-                MessageBox.Show("Stok tidak mencukupi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                koneksi.OpenConnection();
+                reader = koneksi.reader($"SELECT stok FROM t_barang WHERE id = {Id_barang}");
+                if (reader.Read())
+                {
+                    stokSekarang = reader.GetInt32("stok");
+                }
+                reader.Close();
+                koneksi.CloseConnection();
+
+                if (Jumlah > stokSekarang)
+                {
+                    MessageBox.Show("Stok tidak mencukupi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Kurangi stok barang
+                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok - {Jumlah} WHERE id = {Id_barang}");
+            }
+            else if (Jenis_transaksi == "Masuk")
+            {
+                // Tambah stok barang
+                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok + {Jumlah} WHERE id = {Id_barang}");
             }
 
-            // Simpan transaksi ke dalam database
+            // Simpan transaksi
             m_transaksi.Id_barang = Id_barang.ToString();
             m_transaksi.Jenis_transaksi = Jenis_transaksi;
             m_transaksi.Jumlah = Jumlah.ToString();
@@ -147,17 +186,12 @@ namespace Gudangin.view
 
         private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxNamaBarang.SelectedItem != null)
-            {
-                string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
-                if (barangDict.ContainsKey(Nama_barang))
-                {
-                    int Id_Barang = barangDict[Nama_barang];
-
-                    MessageBox.Show($"ID Barang: {Id_Barang}", "Informasi Barang", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-
+            //if (comboBoxNamaBarang.SelectedItem != null)
+            //{
+            //    string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
+            //    MessageBox.Show($"Barang dipilih: {Nama_barang}", "Informasi Barang", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            LoadBarang();
         }
 
         private void btnExport_Click(object sender, EventArgs e)

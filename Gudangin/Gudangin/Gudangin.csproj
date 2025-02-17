@@ -143,6 +143,18 @@
     <Compile Include="view\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FormPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormPesanan.Designer.cs">
+      <DependentUpon>FormPesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FormPermintaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormPermintaan.Designer.cs">
+      <DependentUpon>FormPermintaan.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FormTransaksi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormPermintaan.resx">
+      <DependentUpon>FormPermintaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormPesanan.resx">
+      <DependentUpon>FormPesanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FormTransaksi.resx">
       <DependentUpon>FormTransaksi.cs</DependentUpon>

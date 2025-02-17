@@ -36,12 +36,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelStats = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.buttonLaporan = new System.Windows.Forms.Button();
+            this.buttonPesanan = new System.Windows.Forms.Button();
             this.buttonTransaksi = new System.Windows.Forms.Button();
             this.buttonBarang = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelGudangin = new System.Windows.Forms.Label();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxCari = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.tbJumlah = new System.Windows.Forms.TextBox();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTransaksi)).BeginInit();
             this.panel1.SuspendLayout();
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panelStats);
             this.panel1.Controls.Add(this.buttonLogout);
-            this.panel1.Controls.Add(this.buttonLaporan);
+            this.panel1.Controls.Add(this.buttonPesanan);
             this.panel1.Controls.Add(this.buttonTransaksi);
             this.panel1.Controls.Add(this.buttonBarang);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -155,19 +155,19 @@
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = true;
             // 
-            // buttonLaporan
+            // buttonPesanan
             // 
-            this.buttonLaporan.FlatAppearance.BorderSize = 0;
-            this.buttonLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLaporan.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLaporan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonLaporan.Location = new System.Drawing.Point(3, 282);
-            this.buttonLaporan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonLaporan.Name = "buttonLaporan";
-            this.buttonLaporan.Size = new System.Drawing.Size(200, 36);
-            this.buttonLaporan.TabIndex = 2;
-            this.buttonLaporan.Text = "Laporan";
-            this.buttonLaporan.UseVisualStyleBackColor = true;
+            this.buttonPesanan.FlatAppearance.BorderSize = 0;
+            this.buttonPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPesanan.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPesanan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPesanan.Location = new System.Drawing.Point(3, 282);
+            this.buttonPesanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPesanan.Name = "buttonPesanan";
+            this.buttonPesanan.Size = new System.Drawing.Size(200, 36);
+            this.buttonPesanan.TabIndex = 2;
+            this.buttonPesanan.Text = "Pesanan";
+            this.buttonPesanan.UseVisualStyleBackColor = true;
             // 
             // buttonTransaksi
             // 
@@ -232,6 +232,19 @@
             this.groupBoxSearch.TabIndex = 17;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Search";
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnExport.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(557, 25);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(129, 28);
+            this.btnExport.TabIndex = 10;
+            this.btnExport.Text = "Export Excel";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // buttonSearch
             // 
@@ -341,19 +354,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data Transaksi";
             // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnExport.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(557, 25);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(129, 28);
-            this.btnExport.TabIndex = 10;
-            this.btnExport.Text = "Export Excel";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
             // FormTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -392,7 +392,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelStats;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button buttonLaporan;
+        private System.Windows.Forms.Button buttonPesanan;
         private System.Windows.Forms.Button buttonTransaksi;
         private System.Windows.Forms.Button buttonBarang;
         private System.Windows.Forms.Panel panel2;

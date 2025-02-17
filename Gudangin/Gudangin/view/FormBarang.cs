@@ -64,8 +64,8 @@ namespace Gudangin.view
 
         private void buttonLaporan_Click(object sender, EventArgs e)
         {
-            panelStats.Height = buttonLaporan.Height;
-            panelStats.Top = buttonLaporan.Top;
+            panelStats.Height = buttonPesanan.Height;
+            panelStats.Top = buttonPesanan.Top;
 
         }
 
