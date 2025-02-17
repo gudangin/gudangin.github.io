@@ -39,6 +39,7 @@
             this.textBoxCari = new System.Windows.Forms.TextBox();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             this.panelDataBarang = new System.Windows.Forms.Panel();
+            this.buttonPesan = new System.Windows.Forms.Button();
             this.groupBoxInputBarang = new System.Windows.Forms.GroupBox();
             this.groupBoxDataBarang = new System.Windows.Forms.GroupBox();
             this.labelGudangin = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.buttonTransaksi = new System.Windows.Forms.Button();
             this.buttonBarang = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonTambah = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).BeginInit();
             this.groupBoxSearch.SuspendLayout();
             this.panelDataBarang.SuspendLayout();
@@ -161,7 +161,7 @@
             // 
             // panelDataBarang
             // 
-            this.panelDataBarang.Controls.Add(this.buttonTambah);
+            this.panelDataBarang.Controls.Add(this.buttonPesan);
             this.panelDataBarang.Controls.Add(this.groupBoxSearch);
             this.panelDataBarang.Controls.Add(this.groupBoxInputBarang);
             this.panelDataBarang.Controls.Add(this.groupBoxDataBarang);
@@ -171,6 +171,16 @@
             this.panelDataBarang.Name = "panelDataBarang";
             this.panelDataBarang.Size = new System.Drawing.Size(753, 561);
             this.panelDataBarang.TabIndex = 5;
+            // 
+            // buttonPesan
+            // 
+            this.buttonPesan.Location = new System.Drawing.Point(219, 520);
+            this.buttonPesan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPesan.Name = "buttonPesan";
+            this.buttonPesan.Size = new System.Drawing.Size(147, 30);
+            this.buttonPesan.TabIndex = 2;
+            this.buttonPesan.Text = "Pesan";
+            this.buttonPesan.UseVisualStyleBackColor = true;
             // 
             // groupBoxInputBarang
             // 
@@ -299,16 +309,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 602);
             this.panel1.TabIndex = 3;
             // 
-            // buttonTambah
-            // 
-            this.buttonTambah.Location = new System.Drawing.Point(219, 520);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(147, 30);
-            this.buttonTambah.TabIndex = 2;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = true;
-            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,7 +347,7 @@
         private System.Windows.Forms.TextBox textBoxCari;
         private System.Windows.Forms.GroupBox groupBoxSearch;
         private System.Windows.Forms.Panel panelDataBarang;
-        private System.Windows.Forms.Button buttonTambah;
+        private System.Windows.Forms.Button buttonPesan;
         private System.Windows.Forms.GroupBox groupBoxInputBarang;
         private System.Windows.Forms.GroupBox groupBoxDataBarang;
         private System.Windows.Forms.Label labelGudangin;
