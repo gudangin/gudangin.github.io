@@ -1,11 +1,13 @@
 ﻿using Gudangin.controller;
 using Gudangin.model;
+using Gudangin.lib;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,15 +52,25 @@ namespace Gudangin.view
                 DataTransaksi.DataSource = null;
             }
         }
+        private Dictionary<string, int> barangDict = new Dictionary<string, int>();
+
         private void LoadBarang()
         {
             MySqlDataReader reader = koneksi.reader("SELECT id, nama_barang FROM t_barang");
+            comboBoxNamaBarang.Items.Clear();
+            barangDict.Clear();
+
             while (reader.Read())
             {
-                comboBoxNamaBarang.Items.Add(reader["nama_barang"].ToString());
+                string Nama_barang = reader["nama_barang"].ToString();
+                int Id_barang = Convert.ToInt32(reader["id"]);
+
+                comboBoxNamaBarang.Items.Add(Nama_barang); // Tambah ke comboBox
+                barangDict[Nama_barang] = Id_barang; // Simpan dalam Dictionary
             }
             reader.Close();
         }
+
 
         private void ResetForm()
         {
@@ -132,5 +144,53 @@ namespace Gudangin.view
                 TampilTransaksi();
             }
         }
+
+        private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxNamaBarang.SelectedItem != null)
+            {
+                string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
+                if (barangDict.ContainsKey(Nama_barang))
+                {
+                    int Id_Barang = barangDict[Nama_barang];
+
+                    MessageBox.Show($"ID Barang: {Id_Barang}", "Informasi Barang", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel Documents (*.xlsx)|*.xlsx";
+            save.FileName = "Report Transaksi.xlsx";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                string directory = Path.GetDirectoryName(save.FileName);
+                string fileNameWithoutExt = Path.GetFileNameWithoutExtension(save.FileName);
+                string extension = Path.GetExtension(save.FileName);
+                int count = 1;
+                string filePath = save.FileName;
+                while (File.Exists(filePath))
+                {
+                    filePath = Path.Combine(directory, $"{fileNameWithoutExt}({count}){extension}");
+                    count++;
+                }
+
+                //Membuat instance dari kelas Excel
+                Excel excel_lib = new Excel();
+
+                //Memanggil metode ExportToExcel
+                excel_lib.ExportToExcel(DataTransaksi, filePath);
+
+                //Notifikasi berhasil
+                MessageBox.Show("Data berhasil diekspor ke file Excel.",
+                    "Informasi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+            }
+        }
     }
-}

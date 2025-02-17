@@ -52,6 +52,7 @@
             this.tbJumlah = new System.Windows.Forms.TextBox();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTransaksi)).BeginInit();
             this.panel1.SuspendLayout();
@@ -220,6 +221,7 @@
             // 
             // groupBoxSearch
             // 
+            this.groupBoxSearch.Controls.Add(this.btnExport);
             this.groupBoxSearch.Controls.Add(this.buttonSearch);
             this.groupBoxSearch.Controls.Add(this.textBoxCari);
             this.groupBoxSearch.Location = new System.Drawing.Point(215, 303);
@@ -246,7 +248,7 @@
             this.textBoxCari.Location = new System.Drawing.Point(93, 25);
             this.textBoxCari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCari.Name = "textBoxCari";
-            this.textBoxCari.Size = new System.Drawing.Size(560, 22);
+            this.textBoxCari.Size = new System.Drawing.Size(444, 22);
             this.textBoxCari.TabIndex = 7;
             // 
             // label3
@@ -289,6 +291,7 @@
             this.comboBoxNamaBarang.Name = "comboBoxNamaBarang";
             this.comboBoxNamaBarang.Size = new System.Drawing.Size(209, 24);
             this.comboBoxNamaBarang.TabIndex = 6;
+            this.comboBoxNamaBarang.SelectedIndexChanged += new System.EventHandler(this.comboBoxNamaBarang_SelectedIndexChanged);
             // 
             // dateTimePicker
             // 
@@ -337,6 +340,19 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data Transaksi";
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnExport.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(557, 25);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(129, 28);
+            this.btnExport.TabIndex = 10;
+            this.btnExport.Text = "Export Excel";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // FormTransaksi
             // 
@@ -392,5 +408,6 @@
         private System.Windows.Forms.TextBox tbJumlah;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnExport;
     }
 }

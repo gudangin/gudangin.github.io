@@ -92,3 +92,13 @@ D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangi
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.Up2Date
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\EPPlus.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\EPPlus.Interfaces.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\EPPlus.System.Drawing.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.ComponentModel.Annotations.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\EPPlus.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.pdb
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.xml
