@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="controller\BarangController.cs" />
     <Compile Include="controller\Koneksi.cs" />
+    <Compile Include="controller\TransaksiController.cs" />
     <Compile Include="model\Barang.cs" />
+    <Compile Include="model\Transaksi.cs" />
     <Compile Include="view\FormBarang.cs">
       <SubType>Form</SubType>
     </Compile>

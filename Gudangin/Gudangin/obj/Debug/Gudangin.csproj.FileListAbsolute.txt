@@ -59,3 +59,36 @@ C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\G
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.Up2Date
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\BouncyCastle.Cryptography.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Google.Protobuf.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Compression.LZ4.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Hash.xxHash.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\MySql.Data.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Buffers.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.IO.Pipelines.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Memory.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Numerics.Vectors.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\ZstdSharp.dll
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\BouncyCastle.Cryptography.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Google.Protobuf.pdb
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Google.Protobuf.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Compression.LZ4.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\K4os.Hash.xxHash.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\MySql.Data.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Buffers.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.IO.Pipelines.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Memory.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Numerics.Vectors.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.Up2Date

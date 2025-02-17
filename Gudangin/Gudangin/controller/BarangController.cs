@@ -19,7 +19,7 @@ namespace Gudangin.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO barang (nama_barang, kategori, stok) VALUES ('" + barang.Nama_barang + "', '" + barang.Kategori + "', '" + barang.Stok + "')");
+                koneksi.ExecuteQuery("INSERT INTO t_barang (nama_barang, kategori, stok) VALUES ('" + barang.Nama_barang + "', '" + barang.Kategori + "', '" + barang.Stok + "')");
                 status = true;
                 MessageBox.Show("Data berhasil ditambahkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
@@ -38,7 +38,7 @@ namespace Gudangin.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("UPDATE barang SET nama_barang='" + barang.Nama_barang + "', kategori='" + barang.Kategori + "', stok='" + barang.Stok + "' WHERE id='" + barang.Id + "'");
+                koneksi.ExecuteQuery("UPDATE t_barang SET nama_barang='" + barang.Nama_barang + "', kategori='" + barang.Kategori + "', stok='" + barang.Stok + "' WHERE id='" + barang.Id + "'");
                 status = true;
                 MessageBox.Show("Data berhasil diubah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
@@ -57,7 +57,7 @@ namespace Gudangin.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM barang WHERE id='" + id + "'");
+                koneksi.ExecuteQuery("DELETE FROM t_barang WHERE id='" + id + "'");
                 status = true;
                 MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();

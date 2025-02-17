@@ -73,7 +73,7 @@ namespace Gudangin.view
         }
         public void Tampil()
         {
-            dataGridViewDataBarang.DataSource = koneksi.ShowData("SELECT * FROM barang");
+            dataGridViewDataBarang.DataSource = koneksi.ShowData("SELECT * FROM t_barang");
             dataGridViewDataBarang.Columns[0].HeaderText = "id";
             dataGridViewDataBarang.Columns[1].HeaderText = "nama_barang";
             dataGridViewDataBarang.Columns[2].HeaderText = "kategori";
@@ -141,7 +141,7 @@ namespace Gudangin.view
 
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM barang WHERE id LIKE '%" + textBoxCari.Text + "%' OR nama_barang LIKE '%" + textBoxCari.Text + "%'";
+            string query = "SELECT * FROM t_barang WHERE id LIKE '%" + textBoxCari.Text + "%' OR nama_barang LIKE '%" + textBoxCari.Text + "%'";
             dataGridViewDataBarang.DataSource = koneksi.ShowData(query);
         }
 
