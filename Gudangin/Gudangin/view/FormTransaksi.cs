@@ -16,6 +16,8 @@ namespace Gudangin.view
     public partial class FormTransaksi : Form
     {
         Koneksi koneksi = new Koneksi();
+        TransaksiController transaksi = new TransaksiController();
+        Transaksi m_transaksi = new Transaksi();
         public FormTransaksi()
         {
             InitializeComponent();
@@ -70,50 +72,45 @@ namespace Gudangin.view
                 return;
             }
 
-            string jenisTransaksi = comboBoxJenisTransaksi.SelectedItem.ToString();
-            string namaBarang = comboBoxNamaBarang.SelectedItem.ToString();
-            int jumlah = int.Parse(tbJumlah.Text);
-            string tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
+            string Jenis_transaksi = comboBoxJenisTransaksi.SelectedItem.ToString();
+            string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
+            int Jumlah = int.Parse(tbJumlah.Text);
+            string Tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
             // Cek ID barang berdasarkan nama barang
-            MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{namaBarang}'");
-            int idBarang = 0, stokSekarang = 0;
+            MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{Nama_barang}'");
+            int Id_barang = 0, stokSekarang = 0;
 
             if (reader.Read())
             {
-                idBarang = Convert.ToInt32(reader["id"]);
+                Id_barang = Convert.ToInt32(reader["id"]);
                 stokSekarang = Convert.ToInt32(reader["stok"]);
             }
             reader.Close();
 
-            if (idBarang == 0)
+            if (Id_barang == 0)
             {
                 MessageBox.Show("Barang tidak ditemukan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (jenisTransaksi == "Keluar" && jumlah > stokSekarang)
+            if (Jenis_transaksi == "Keluar" && Jumlah > stokSekarang)
             {
                 MessageBox.Show("Stok tidak mencukupi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Simpan transaksi
-            koneksi.ExecuteQuery($"INSERT INTO t_transaksi (id_barang, jenis_transaksi, jumlah, tanggal) VALUES ({idBarang}, '{jenisTransaksi}', {jumlah}, '{tanggal}')");
+            //transaksi.id_barang = Id_barang.ToString();
+            //transaksi.jenis_transaksi = Jenis_transaksi;
+            //transaksi.jumlah = Jumlah.ToString();
+            //transaksi.tanggal = Tanggal;
 
-            // Update stok di t_barang
-            if (jenisTransaksi == "Masuk")
-            {
-                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok + {jumlah} WHERE id = {idBarang}");
-            }
-            else if (jenisTransaksi == "Keluar")
-            {
-                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok - {jumlah} WHERE id = {idBarang}");
-            }
-
-            MessageBox.Show("Transaksi berhasil disimpan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ResetForm();
-            TampilTransaksi();
+            //if (transaksi.Insert(transaksi))
+            //{
+            //    ResetForm();
+            //    TampilTransaksi();
+            //}
         }
     }
 }

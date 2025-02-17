@@ -8,23 +8,27 @@ namespace Gudangin.model
 {
     internal class Transaksi
     {
-        public int Id { get; set; }
-        public int IdBarang { get; set; }
-        public string NamaBarang { get; set; }
-        public string JenisTransaksi { get; set; }
-        public int Jumlah { get; set; }
-        public DateTime Tanggal { get; set; }
+        string id, id_barang, jenis_transaksi, jumlah, tanggal;
+       
 
         public Transaksi() { }
 
-        public Transaksi(int id, int idBarang, string namaBarang, string jenisTransaksi, int jumlah, DateTime tanggal)
+        public Transaksi(string id, string id_barang, string jenis_transaksi, string jumlah, string tanggal)
         {
             this.Id = id;
-            this.IdBarang = idBarang;
-            this.NamaBarang = namaBarang;
-            this.JenisTransaksi = jenisTransaksi;
+            this.Id_barang = id_barang;
+            //this.NamaBarang = namaBarang;
+            this.Jenis_transaksi = jenis_transaksi;
             this.Jumlah = jumlah;
             this.Tanggal = tanggal;
         }
+
+        public string Id { get => id; set => id = value; }
+        public string Id_barang { get => id_barang; set => id_barang = value; }
+
+        //public string NamaBarang { get; set; }
+        public string Jenis_transaksi { get => jenis_transaksi; set => jenis_transaksi = value; }
+        public string Jumlah { get => jumlah; set => jumlah = value; }
+        public string Tanggal { get => tanggal; set => tanggal = value; }
     }
 }

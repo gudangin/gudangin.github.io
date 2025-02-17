@@ -21,6 +21,27 @@ namespace Gudangin.view
         {
             InitializeComponent();
         }
+        private void FormBarang_Load(object sender, EventArgs e)
+        {
+            Tampil();
+        }
+
+        public void Tampil()
+        {
+            dataGridViewDataBarang.DataSource = koneksi.ShowData("SELECT * FROM t_barang");
+            dataGridViewDataBarang.Columns[0].HeaderText = "id";
+            dataGridViewDataBarang.Columns[1].HeaderText = "nama_barang";
+            dataGridViewDataBarang.Columns[2].HeaderText = "kategori";
+            dataGridViewDataBarang.Columns[3].HeaderText = "stok";
+        }
+
+        public void Reset()
+        {
+            textBoxNamaBrg.Text = "";
+            textBoxStok.Text = "";
+            textBoxCari.Text = "";
+            comboBoxKategori.SelectedIndex = -1;
+        }
 
         private void buttonBarang_Click(object sender, EventArgs e)
         {
@@ -65,69 +86,29 @@ namespace Gudangin.view
                     Reset();
                     Tampil();
                 }
-                else
-                {
-                    MessageBox.Show("Gagal menambahkan data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-        public void Tampil()
-        {
-            dataGridViewDataBarang.DataSource = koneksi.ShowData("SELECT * FROM t_barang");
-            dataGridViewDataBarang.Columns[0].HeaderText = "id";
-            dataGridViewDataBarang.Columns[1].HeaderText = "nama_barang";
-            dataGridViewDataBarang.Columns[2].HeaderText = "kategori";
-            dataGridViewDataBarang.Columns[3].HeaderText = "stok";
-        }
-
-        private void FormBarang_Load(object sender, EventArgs e)
-        {
-            Tampil();
-        }
-        public void Reset()
-        {
-            textBoxNamaBrg.Text = "";
-            textBoxStok.Text = "";
-            textBoxCari.Text = "";
-            comboBoxKategori.SelectedIndex = -1;
-        }
-
-        private void buttonHapus_Click(object sender, EventArgs e)
-        {
-            DialogResult pesan = MessageBox.Show(
-                "Apakah yakin akan menghapus data ini?",
-                "Perhatian",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (pesan == DialogResult.Yes)
-            {
-                if (barang.Delete(textBoxCari.Text))
-                {
-                    Reset();
-                    Tampil();
-                }
-                else
-                {
-                    MessageBox.Show("Gagal menghapus data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBoxNamaBrg.Text) || string.IsNullOrWhiteSpace(textBoxStok.Text))
+            if (dataGridViewDataBarang.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih data yang ingin diedit!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(textBoxNamaBrg.Text) || string.IsNullOrWhiteSpace(textBoxStok.Text))
             {
                 MessageBox.Show("Data tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
             else
             {
-                m_barang.Id = textBoxCari.Text;
+                string id = dataGridViewDataBarang.SelectedRows[0].Cells[0].Value.ToString();
+                m_barang.Id = id;
                 m_barang.Nama_barang = textBoxNamaBrg.Text;
                 m_barang.Kategori = comboBoxKategori.SelectedItem.ToString();
                 m_barang.Stok = textBoxStok.Text;
 
-                if (barang.Update(m_barang, textBoxCari.Text))
+                if (barang.Update(m_barang, id))
                 {
                     Reset();
                     Tampil();
@@ -135,6 +116,27 @@ namespace Gudangin.view
                 else
                 {
                     MessageBox.Show("Gagal mengubah data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDataBarang.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih data yang ingin dihapus!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridViewDataBarang.SelectedRows[0].Cells[0].Value.ToString();
+            DialogResult pesan = MessageBox.Show("Apakah yakin akan menghapus data ini?", "Perhatian", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (pesan == DialogResult.Yes)
+            {
+                if (barang.Delete(id))
+                {
+                    Reset();
+                    Tampil();
                 }
             }
         }

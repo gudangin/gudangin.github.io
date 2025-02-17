@@ -1,10 +1,7 @@
 ﻿using Gudangin.model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Gudangin.controller
 {
@@ -12,62 +9,78 @@ namespace Gudangin.controller
     {
         Koneksi koneksi = new Koneksi();
 
-        // Insert Data
+        // Insert Data Barang
         public bool Insert(Barang barang)
         {
             bool status = false;
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO t_barang (nama_barang, kategori, stok) VALUES ('" + barang.Nama_barang + "', '" + barang.Kategori + "', '" + barang.Stok + "')");
+                string query = "INSERT INTO t_barang (nama_barang, kategori, stok) VALUES (@nama, @kategori, @stok)";
+                MySqlCommand cmd = new MySqlCommand(query, koneksi.kon);
+                cmd.Parameters.AddWithValue("@nama", barang.Nama_barang);
+                cmd.Parameters.AddWithValue("@kategori", barang.Kategori);
+                cmd.Parameters.AddWithValue("@stok", barang.Stok);
+                cmd.ExecuteNonQuery();
                 status = true;
+
                 MessageBox.Show("Data berhasil ditambahkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Gagal menambahkan data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return status;
         }
 
-        // Update Data
+        // Update Data Barang
         public bool Update(Barang barang, string id)
         {
             bool status = false;
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("UPDATE t_barang SET nama_barang='" + barang.Nama_barang + "', kategori='" + barang.Kategori + "', stok='" + barang.Stok + "' WHERE id='" + barang.Id + "'");
+                string query = "UPDATE t_barang SET nama_barang = @nama, kategori = @kategori, stok = @stok WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, koneksi.kon);
+                cmd.Parameters.AddWithValue("@nama", barang.Nama_barang);
+                cmd.Parameters.AddWithValue("@kategori", barang.Kategori);
+                cmd.Parameters.AddWithValue("@stok", barang.Stok);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
                 status = true;
+
                 MessageBox.Show("Data berhasil diubah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Gagal mengubah data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return status;
         }
 
-        // Delete Data
+        // Delete Data Barang
         public bool Delete(string id)
         {
             bool status = false;
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM t_barang WHERE id='" + id + "'");
+                string query = "DELETE FROM t_barang WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, koneksi.kon);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
                 status = true;
+
                 MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Gagal menghapus data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return status;
         }
-
     }
 }
