@@ -102,3 +102,4 @@ D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangi
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.pdb
 D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.xml
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormUser.resources

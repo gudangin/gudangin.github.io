@@ -45,7 +45,7 @@ namespace Gudangin.view
                 }
                 else
                 {
-                    FormBarang userDashboard = new FormBarang();
+                    FormUser userDashboard = new FormUser();
                     userDashboard.Show();
                 }
             }
