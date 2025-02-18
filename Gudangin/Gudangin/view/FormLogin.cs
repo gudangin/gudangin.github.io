@@ -36,24 +36,26 @@ namespace Gudangin.view
             if (userController.Authenticate(m_user))
             {
                 MessageBox.Show("Login berhasil sebagai " + m_user.Role, "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+
+                this.Hide(); 
 
                 if (m_user.Role == "admin")
                 {
                     FormBarang formMain = new FormBarang();
-                    formMain.Show();
+                    formMain.ShowDialog(); 
                 }
                 else
                 {
-                    FormUser userDashboard = new FormUser();
-                    userDashboard.Show();
+                    FormUser userDashboard = new FormUser(Convert.ToInt32(m_user.Id_user));
+                    userDashboard.ShowDialog();
                 }
+
+                this.Close(); 
             }
             else
             {
                 MessageBox.Show("Username atau password salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }

@@ -114,3 +114,5 @@ C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\G
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.pdb
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\bin\Debug\System.Drawing.Common.xml
 C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormUser.resources
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\gudangin\Gudangin\obj\Debug\Gudangin.view.FormPermintaan.resources
+C:\Users\Lenovo\Documents\Semester 3\Pemrograman 2\gudangin.github.io\gudangin\Gudangin\obj\Debug\Gudangin.view.FormPesanan.resources

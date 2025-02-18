@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelGudangin = new System.Windows.Forms.Label();
             this.panelDataBarang = new System.Windows.Forms.Panel();
+            this.buttonBatal = new System.Windows.Forms.Button();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxCari = new System.Windows.Forms.TextBox();
@@ -42,20 +43,19 @@
             this.labelNamaBarang = new System.Windows.Forms.Label();
             this.comboBoxKategori = new System.Windows.Forms.ComboBox();
             this.labelKategori = new System.Windows.Forms.Label();
-            this.textBoxStok = new System.Windows.Forms.TextBox();
+            this.textBoxJumlah = new System.Windows.Forms.TextBox();
             this.labelStok = new System.Windows.Forms.Label();
             this.groupBoxDataBarang = new System.Windows.Forms.GroupBox();
-            this.dataGridViewDataBarang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDataPesanan = new System.Windows.Forms.DataGridView();
             this.buttonBarang = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonBatal = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panelDataBarang.SuspendLayout();
             this.groupBoxSearch.SuspendLayout();
             this.groupBoxInputBarang.SuspendLayout();
             this.groupBoxDataBarang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataPesanan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +131,17 @@
             this.panelDataBarang.Size = new System.Drawing.Size(762, 578);
             this.panelDataBarang.TabIndex = 8;
             // 
+            // buttonBatal
+            // 
+            this.buttonBatal.Location = new System.Drawing.Point(242, 519);
+            this.buttonBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBatal.Name = "buttonBatal";
+            this.buttonBatal.Size = new System.Drawing.Size(147, 30);
+            this.buttonBatal.TabIndex = 17;
+            this.buttonBatal.Text = "Batalkan Pesanan";
+            this.buttonBatal.UseVisualStyleBackColor = true;
+            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
+            // 
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.buttonSearch);
@@ -168,7 +179,7 @@
             this.groupBoxInputBarang.Controls.Add(this.labelNamaBarang);
             this.groupBoxInputBarang.Controls.Add(this.comboBoxKategori);
             this.groupBoxInputBarang.Controls.Add(this.labelKategori);
-            this.groupBoxInputBarang.Controls.Add(this.textBoxStok);
+            this.groupBoxInputBarang.Controls.Add(this.textBoxJumlah);
             this.groupBoxInputBarang.Controls.Add(this.labelStok);
             this.groupBoxInputBarang.Location = new System.Drawing.Point(15, 310);
             this.groupBoxInputBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,6 +195,7 @@
             this.textBoxNamaBrg.Location = new System.Drawing.Point(109, 30);
             this.textBoxNamaBrg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNamaBrg.Name = "textBoxNamaBrg";
+            this.textBoxNamaBrg.ReadOnly = true;
             this.textBoxNamaBrg.Size = new System.Drawing.Size(366, 22);
             this.textBoxNamaBrg.TabIndex = 11;
             // 
@@ -198,6 +210,7 @@
             // 
             // comboBoxKategori
             // 
+            this.comboBoxKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKategori.FormattingEnabled = true;
             this.comboBoxKategori.Items.AddRange(new object[] {
             "Peralatan Dapur",
@@ -219,13 +232,14 @@
             this.labelKategori.TabIndex = 9;
             this.labelKategori.Text = "Kategori";
             // 
-            // textBoxStok
+            // textBoxJumlah
             // 
-            this.textBoxStok.Location = new System.Drawing.Point(109, 153);
-            this.textBoxStok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxStok.Name = "textBoxStok";
-            this.textBoxStok.Size = new System.Drawing.Size(366, 22);
-            this.textBoxStok.TabIndex = 12;
+            this.textBoxJumlah.Location = new System.Drawing.Point(109, 153);
+            this.textBoxJumlah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxJumlah.Name = "textBoxJumlah";
+            this.textBoxJumlah.ReadOnly = true;
+            this.textBoxJumlah.Size = new System.Drawing.Size(366, 22);
+            this.textBoxJumlah.TabIndex = 12;
             // 
             // labelStok
             // 
@@ -238,7 +252,7 @@
             // 
             // groupBoxDataBarang
             // 
-            this.groupBoxDataBarang.Controls.Add(this.dataGridViewDataBarang);
+            this.groupBoxDataBarang.Controls.Add(this.dataGridViewDataPesanan);
             this.groupBoxDataBarang.Location = new System.Drawing.Point(0, 0);
             this.groupBoxDataBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxDataBarang.Name = "groupBoxDataBarang";
@@ -248,16 +262,17 @@
             this.groupBoxDataBarang.TabStop = false;
             this.groupBoxDataBarang.Text = "Data Barang";
             // 
-            // dataGridViewDataBarang
+            // dataGridViewDataPesanan
             // 
-            this.dataGridViewDataBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDataBarang.Location = new System.Drawing.Point(0, 21);
-            this.dataGridViewDataBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewDataBarang.Name = "dataGridViewDataBarang";
-            this.dataGridViewDataBarang.RowHeadersWidth = 51;
-            this.dataGridViewDataBarang.RowTemplate.Height = 24;
-            this.dataGridViewDataBarang.Size = new System.Drawing.Size(760, 217);
-            this.dataGridViewDataBarang.TabIndex = 0;
+            this.dataGridViewDataPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDataPesanan.Location = new System.Drawing.Point(0, 45);
+            this.dataGridViewDataPesanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewDataPesanan.Name = "dataGridViewDataPesanan";
+            this.dataGridViewDataPesanan.RowHeadersWidth = 51;
+            this.dataGridViewDataPesanan.RowTemplate.Height = 24;
+            this.dataGridViewDataPesanan.Size = new System.Drawing.Size(760, 190);
+            this.dataGridViewDataPesanan.TabIndex = 0;
+            this.dataGridViewDataPesanan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDataPesanan_CellClick);
             // 
             // buttonBarang
             // 
@@ -272,6 +287,7 @@
             this.buttonBarang.TabIndex = 0;
             this.buttonBarang.Text = "Barang";
             this.buttonBarang.UseVisualStyleBackColor = true;
+            this.buttonBarang.Click += new System.EventHandler(this.buttonBarang_Click);
             // 
             // panel1
             // 
@@ -299,16 +315,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonBatal
-            // 
-            this.buttonBatal.Location = new System.Drawing.Point(242, 519);
-            this.buttonBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBatal.Name = "buttonBatal";
-            this.buttonBatal.Size = new System.Drawing.Size(147, 30);
-            this.buttonBatal.TabIndex = 17;
-            this.buttonBatal.Text = "Batalkan Pesanan";
-            this.buttonBatal.UseVisualStyleBackColor = true;
-            // 
             // FormPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -319,6 +325,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormPesanan";
             this.Text = "FormPesanan";
+            this.Load += new System.EventHandler(this.FormPesanan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelDataBarang.ResumeLayout(false);
@@ -327,7 +334,7 @@
             this.groupBoxInputBarang.ResumeLayout(false);
             this.groupBoxInputBarang.PerformLayout();
             this.groupBoxDataBarang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataPesanan)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -348,14 +355,14 @@
         private System.Windows.Forms.GroupBox groupBoxInputBarang;
         private System.Windows.Forms.TextBox textBoxNamaBrg;
         private System.Windows.Forms.Label labelNamaBarang;
-        private System.Windows.Forms.ComboBox comboBoxKategori;
-        private System.Windows.Forms.Label labelKategori;
-        private System.Windows.Forms.TextBox textBoxStok;
+        private System.Windows.Forms.TextBox textBoxJumlah;
         private System.Windows.Forms.Label labelStok;
         private System.Windows.Forms.GroupBox groupBoxDataBarang;
-        private System.Windows.Forms.DataGridView dataGridViewDataBarang;
+        private System.Windows.Forms.DataGridView dataGridViewDataPesanan;
         private System.Windows.Forms.Button buttonBarang;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonBatal;
+        private System.Windows.Forms.ComboBox comboBoxKategori;
+        private System.Windows.Forms.Label labelKategori;
     }
 }

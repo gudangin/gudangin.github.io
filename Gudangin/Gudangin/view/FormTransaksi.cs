@@ -226,5 +226,13 @@ namespace Gudangin.view
                     MessageBoxIcon.Information);
                 }
             }
+
+        private void buttonPesanan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPermintaan formPermintaan = new FormPermintaan();
+            formPermintaan.ShowDialog();
+            this.Close();
         }
+    }
     }

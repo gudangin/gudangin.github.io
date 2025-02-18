@@ -168,6 +168,7 @@
             this.buttonPesanan.TabIndex = 2;
             this.buttonPesanan.Text = "Pesanan";
             this.buttonPesanan.UseVisualStyleBackColor = true;
+            this.buttonPesanan.Click += new System.EventHandler(this.buttonPesanan_Click);
             // 
             // buttonTransaksi
             // 

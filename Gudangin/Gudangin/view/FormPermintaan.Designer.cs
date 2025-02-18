@@ -36,7 +36,7 @@
             this.panelDataBarang = new System.Windows.Forms.Panel();
             this.groupBoxTombolAksi = new System.Windows.Forms.GroupBox();
             this.groupBoxDataBarang = new System.Windows.Forms.GroupBox();
-            this.dataGridViewDataBarang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDataPermintaan = new System.Windows.Forms.DataGridView();
             this.labelGudangin = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonBarang = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.panelDataBarang.SuspendLayout();
             this.groupBoxTombolAksi.SuspendLayout();
             this.groupBoxDataBarang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataPermintaan)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +65,7 @@
             this.buttonSetuju.TabIndex = 2;
             this.buttonSetuju.Text = "Setujui";
             this.buttonSetuju.UseVisualStyleBackColor = true;
+            this.buttonSetuju.Click += new System.EventHandler(this.buttonSetuju_Click);
             // 
             // buttonTolak
             // 
@@ -75,6 +76,7 @@
             this.buttonTolak.TabIndex = 3;
             this.buttonTolak.Text = "Tolak";
             this.buttonTolak.UseVisualStyleBackColor = true;
+            this.buttonTolak.Click += new System.EventHandler(this.buttonTolak_Click);
             // 
             // groupBoxSearch
             // 
@@ -123,18 +125,18 @@
             // 
             this.groupBoxTombolAksi.Controls.Add(this.buttonSetuju);
             this.groupBoxTombolAksi.Controls.Add(this.buttonTolak);
-            this.groupBoxTombolAksi.Location = new System.Drawing.Point(216, 333);
+            this.groupBoxTombolAksi.Location = new System.Drawing.Point(15, 360);
             this.groupBoxTombolAksi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxTombolAksi.Name = "groupBoxTombolAksi";
             this.groupBoxTombolAksi.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxTombolAksi.Size = new System.Drawing.Size(307, 193);
+            this.groupBoxTombolAksi.Size = new System.Drawing.Size(307, 91);
             this.groupBoxTombolAksi.TabIndex = 14;
             this.groupBoxTombolAksi.TabStop = false;
             this.groupBoxTombolAksi.Text = "Tombol Aksi";
             // 
             // groupBoxDataBarang
             // 
-            this.groupBoxDataBarang.Controls.Add(this.dataGridViewDataBarang);
+            this.groupBoxDataBarang.Controls.Add(this.dataGridViewDataPermintaan);
             this.groupBoxDataBarang.Location = new System.Drawing.Point(0, 0);
             this.groupBoxDataBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxDataBarang.Name = "groupBoxDataBarang";
@@ -144,16 +146,17 @@
             this.groupBoxDataBarang.TabStop = false;
             this.groupBoxDataBarang.Text = "Data Barang";
             // 
-            // dataGridViewDataBarang
+            // dataGridViewDataPermintaan
             // 
-            this.dataGridViewDataBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDataBarang.Location = new System.Drawing.Point(0, 21);
-            this.dataGridViewDataBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewDataBarang.Name = "dataGridViewDataBarang";
-            this.dataGridViewDataBarang.RowHeadersWidth = 51;
-            this.dataGridViewDataBarang.RowTemplate.Height = 24;
-            this.dataGridViewDataBarang.Size = new System.Drawing.Size(760, 217);
-            this.dataGridViewDataBarang.TabIndex = 0;
+            this.dataGridViewDataPermintaan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDataPermintaan.Location = new System.Drawing.Point(0, 21);
+            this.dataGridViewDataPermintaan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewDataPermintaan.Name = "dataGridViewDataPermintaan";
+            this.dataGridViewDataPermintaan.RowHeadersWidth = 51;
+            this.dataGridViewDataPermintaan.RowTemplate.Height = 24;
+            this.dataGridViewDataPermintaan.Size = new System.Drawing.Size(760, 217);
+            this.dataGridViewDataPermintaan.TabIndex = 0;
+            this.dataGridViewDataPermintaan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDataPermintaan_CellClick);
             // 
             // labelGudangin
             // 
@@ -278,12 +281,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormPermintaan";
             this.Text = "FormPermintaan";
+            this.Load += new System.EventHandler(this.FormPermintaan_Load);
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
             this.panelDataBarang.ResumeLayout(false);
             this.groupBoxTombolAksi.ResumeLayout(false);
             this.groupBoxDataBarang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataPermintaan)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -303,7 +307,7 @@
         private System.Windows.Forms.Panel panelDataBarang;
         private System.Windows.Forms.GroupBox groupBoxTombolAksi;
         private System.Windows.Forms.GroupBox groupBoxDataBarang;
-        private System.Windows.Forms.DataGridView dataGridViewDataBarang;
+        private System.Windows.Forms.DataGridView dataGridViewDataPermintaan;
         private System.Windows.Forms.Label labelGudangin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonBarang;

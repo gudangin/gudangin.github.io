@@ -64,9 +64,10 @@ namespace Gudangin.view
 
         private void buttonLaporan_Click(object sender, EventArgs e)
         {
-            panelStats.Height = buttonPesanan.Height;
-            panelStats.Top = buttonPesanan.Top;
-
+            this.Hide();
+            FormPermintaan formPermintaan = new FormPermintaan();
+            formPermintaan.ShowDialog();
+            this.Close();
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)

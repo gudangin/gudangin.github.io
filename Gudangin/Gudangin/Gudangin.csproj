@@ -125,10 +125,12 @@
   <ItemGroup>
     <Compile Include="controller\BarangController.cs" />
     <Compile Include="controller\Koneksi.cs" />
+    <Compile Include="controller\PermintaanController.cs" />
     <Compile Include="controller\TransaksiController.cs" />
     <Compile Include="controller\UserController.cs" />
     <Compile Include="lib\Excel.cs" />
     <Compile Include="model\Barang.cs" />
+    <Compile Include="model\Permintaan.cs" />
     <Compile Include="model\Transaksi.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="view\FormBarang.cs">
