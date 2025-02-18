@@ -107,5 +107,11 @@ namespace Gudangin.view
             textBoxJumlah.Clear();
             buttonBatal.Enabled = false;
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            UserController userController = new UserController();
+            userController.Logout(this);
+        }
     }
 }

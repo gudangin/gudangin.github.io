@@ -113,5 +113,11 @@ namespace Gudangin.view
                 MessageBox.Show("Gagal menolak permintaan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            UserController userController = new UserController();
+            userController.Logout(this);
+        }
     }
 }

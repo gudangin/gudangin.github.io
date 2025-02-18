@@ -1,4 +1,5 @@
 ﻿using Gudangin.model;
+using Gudangin.view;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -43,5 +44,17 @@ namespace Gudangin.controller
             return status;
         }
 
+        public void Logout(Form currentForm)
+        {
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                currentForm.Hide();
+                FormLogin loginForm = new FormLogin();
+                loginForm.Show();
+            }
+        }
     }
 }

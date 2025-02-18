@@ -39,6 +39,8 @@
             this.panelDataBarang = new System.Windows.Forms.Panel();
             this.buttonPesan = new System.Windows.Forms.Button();
             this.groupBoxInputBarang = new System.Windows.Forms.GroupBox();
+            this.comboBoxKategori = new System.Windows.Forms.ComboBox();
+            this.labelKategori = new System.Windows.Forms.Label();
             this.groupBoxDataBarang = new System.Windows.Forms.GroupBox();
             this.labelGudangin = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,8 +50,6 @@
             this.buttonStatusPesanan = new System.Windows.Forms.Button();
             this.buttonBarang = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxKategori = new System.Windows.Forms.ComboBox();
-            this.labelKategori = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBarang)).BeginInit();
             this.groupBoxSearch.SuspendLayout();
             this.panelDataBarang.SuspendLayout();
@@ -179,6 +179,30 @@
             this.groupBoxInputBarang.TabStop = false;
             this.groupBoxInputBarang.Text = "Input Data Barang";
             // 
+            // comboBoxKategori
+            // 
+            this.comboBoxKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxKategori.FormattingEnabled = true;
+            this.comboBoxKategori.Items.AddRange(new object[] {
+            "Peralatan Dapur",
+            "Peralatan Kebersihan",
+            "Peralatan Elektronik Rumah Tangga",
+            "Peralatan Kamar & Ruang Tamu"});
+            this.comboBoxKategori.Location = new System.Drawing.Point(109, 94);
+            this.comboBoxKategori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxKategori.Name = "comboBoxKategori";
+            this.comboBoxKategori.Size = new System.Drawing.Size(366, 24);
+            this.comboBoxKategori.TabIndex = 13;
+            // 
+            // labelKategori
+            // 
+            this.labelKategori.AutoSize = true;
+            this.labelKategori.Location = new System.Drawing.Point(5, 96);
+            this.labelKategori.Name = "labelKategori";
+            this.labelKategori.Size = new System.Drawing.Size(57, 16);
+            this.labelKategori.TabIndex = 9;
+            this.labelKategori.Text = "Kategori";
+            // 
             // groupBoxDataBarang
             // 
             this.groupBoxDataBarang.Controls.Add(this.dataGridViewDataBarang);
@@ -245,6 +269,7 @@
             this.buttonLogout.TabIndex = 3;
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonStatusPesanan
             // 
@@ -290,30 +315,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 602);
             this.panel1.TabIndex = 3;
-            // 
-            // comboBoxKategori
-            // 
-            this.comboBoxKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxKategori.FormattingEnabled = true;
-            this.comboBoxKategori.Items.AddRange(new object[] {
-            "Peralatan Dapur",
-            "Peralatan Kebersihan",
-            "Peralatan Elektronik Rumah Tangga",
-            "Peralatan Kamar & Ruang Tamu"});
-            this.comboBoxKategori.Location = new System.Drawing.Point(109, 94);
-            this.comboBoxKategori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxKategori.Name = "comboBoxKategori";
-            this.comboBoxKategori.Size = new System.Drawing.Size(366, 24);
-            this.comboBoxKategori.TabIndex = 13;
-            // 
-            // labelKategori
-            // 
-            this.labelKategori.AutoSize = true;
-            this.labelKategori.Location = new System.Drawing.Point(5, 96);
-            this.labelKategori.Name = "labelKategori";
-            this.labelKategori.Size = new System.Drawing.Size(57, 16);
-            this.labelKategori.TabIndex = 9;
-            this.labelKategori.Text = "Kategori";
             // 
             // FormUser
             // 

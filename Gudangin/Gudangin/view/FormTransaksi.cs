@@ -23,11 +23,11 @@ namespace Gudangin.view
         public FormTransaksi()
         {
             InitializeComponent();
+            TampilTransaksi();
         }
 
         private void FormTransaksi_Load(object sender, EventArgs e)
         {
-            TampilTransaksi();
             LoadBarang();
         }
 
@@ -55,29 +55,25 @@ namespace Gudangin.view
         private Dictionary<string, int> barangDict = new Dictionary<string, int>();
 
         private void LoadBarang()
+
         {
-            MessageBox.Show("Memanggil LoadBarang()", "Debug Info");
-
-            comboBoxNamaBarang.Items.Clear();
-
             try
             {
+                comboBoxNamaBarang.Items.Clear(); // Hapus data sebelumnya
                 koneksi.OpenConnection();
-                MySqlDataReader reader = koneksi.reader("SELECT nama_barang FROM t_barang");
+                MySqlDataReader reader = koneksi.reader("SELECT id, nama_barang FROM t_barang");
 
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        string namaBarang = reader.GetString(0); // Menggunakan indeks 0
+                        string namaBarang = reader["nama_barang"].ToString();
                         comboBoxNamaBarang.Items.Add(namaBarang);
                     }
-
-                    MessageBox.Show("Barang berhasil dimuat: " + comboBoxNamaBarang.Items.Count + " item.", "Debug Info");
                 }
                 else
                 {
-                    MessageBox.Show("Tabel barang kosong!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tidak ada barang yang tersedia!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 reader.Close();
@@ -186,11 +182,11 @@ namespace Gudangin.view
 
         private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (comboBoxNamaBarang.SelectedItem != null)
-            //{
-            //    string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
-            //    MessageBox.Show($"Barang dipilih: {Nama_barang}", "Informasi Barang", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+            if (comboBoxNamaBarang.SelectedItem != null)
+            {
+                string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
+                MessageBox.Show($"Barang dipilih: {Nama_barang}", "Informasi Barang", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             LoadBarang();
         }
 
@@ -233,6 +229,12 @@ namespace Gudangin.view
             FormPermintaan formPermintaan = new FormPermintaan();
             formPermintaan.ShowDialog();
             this.Close();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            UserController userController = new UserController();
+            userController.Logout(this);
         }
     }
     }

@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Gudangin.controller
 {
@@ -81,6 +82,11 @@ namespace Gudangin.controller
                 MessageBox.Show(e.Message, "Gagal menghapus data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return status;
+        }
+        public DataTable GetStokHampirHabis()
+        {
+            string query = "SELECT nama_barang, stok FROM t_barang WHERE stok <= 10";
+            return koneksi.ShowData(query);
         }
     }
 }

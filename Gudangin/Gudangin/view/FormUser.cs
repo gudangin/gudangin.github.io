@@ -113,5 +113,11 @@ namespace Gudangin.view
             formPesanan.ShowDialog();
             this.Close();
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            UserController userController = new UserController();
+            userController.Logout(this);
+        }
     }
 }

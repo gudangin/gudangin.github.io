@@ -1,42 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\model\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\model\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\controller\\transaksicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\controller\\transaksicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\controller\\permintaancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\controller\\permintaancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\pemrograman 2\\gudangin.github.io\\gudangin\\gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formpermintaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\view\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\view\\formbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|c:\\users\\lenovo\\documents\\semester 3\\gudangin.github.io\\gudangin\\gudangin\\controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFC17F6-9D47-4C7C-8416-28996E176464}|Gudangin\\Gudangin.csproj|solutionrelative:gudangin\\controller\\barangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +74,209 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
-              "RelativeToolTip": "Gudangin\\view\\FormLogin.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:56:41.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs [Design]",
-              "RelativeToolTip": "Gudangin\\view\\FormLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T02:00:47.346Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormUser.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormUser.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
-              "RelativeToolTip": "Gudangin\\view\\FormUser.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:52:07.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormUser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormUser.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs [Design]",
-              "RelativeToolTip": "Gudangin\\view\\FormUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:52:04.039Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormPesanan.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormPesanan.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
-              "RelativeToolTip": "Gudangin\\view\\FormPesanan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Title": "Transaksi.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\model\\Transaksi.cs",
+              "RelativeDocumentMoniker": "Gudangin\\model\\Transaksi.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\model\\Transaksi.cs",
+              "RelativeToolTip": "Gudangin\\model\\Transaksi.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:48:16.576Z",
+              "WhenOpened": "2025-02-18T06:43:16.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormPesanan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormPesanan.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs [Design]",
-              "RelativeToolTip": "Gudangin\\view\\FormPesanan.cs [Design]",
+              "Title": "TransaksiController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\TransaksiController.cs",
+              "RelativeDocumentMoniker": "Gudangin\\controller\\TransaksiController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\TransaksiController.cs",
+              "RelativeToolTip": "Gudangin\\controller\\TransaksiController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAIwIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:47:37.584Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PermintaanController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\PermintaanController.cs",
-              "RelativeDocumentMoniker": "Gudangin\\controller\\PermintaanController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\PermintaanController.cs",
-              "RelativeToolTip": "Gudangin\\controller\\PermintaanController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:35:54.084Z",
+              "WhenOpened": "2025-02-18T06:43:00.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormPermintaan.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
-              "RelativeDocumentMoniker": "Gudangin\\view\\FormPermintaan.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
-              "RelativeToolTip": "Gudangin\\view\\FormPermintaan.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAuwHUAAAAAAAAAAAAAAA==",
+              "Title": "FormUser.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormUser.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormUser.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAA5wHgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:35:31.701Z",
+              "WhenOpened": "2025-02-18T06:00:48.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormUser.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormUser.cs [Design]",
+              "RelativeToolTip": "Gudangin\\view\\FormUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:46.799Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormTransaksi.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormTransaksi.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormTransaksi.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormTransaksi.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormTransaksi.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAIwL0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:43.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormTransaksi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormTransaksi.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormTransaksi.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormTransaksi.cs [Design]",
+              "RelativeToolTip": "Gudangin\\view\\FormTransaksi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:41.552Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs [Design]",
+              "RelativeToolTip": "Gudangin\\view\\FormLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:57:19.589Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormLogin.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormLogin.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwEcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:57:23.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FormPermintaan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
+              "Title": "FormPesanan.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormPesanan.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormPesanan.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAkwHEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:37.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormPesanan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormPesanan.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPesanan.cs [Design]",
+              "RelativeToolTip": "Gudangin\\view\\FormPesanan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:35.879Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormPermintaan.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
               "RelativeDocumentMoniker": "Gudangin\\view\\FormPermintaan.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\Pemrograman 2\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs [Design]",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormPermintaan.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAkwHcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:32.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormPermintaan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormPermintaan.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormPermintaan.cs [Design]",
               "RelativeToolTip": "Gudangin\\view\\FormPermintaan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:35:29.93Z",
+              "WhenOpened": "2025-02-18T06:00:30.21Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormBarang.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormBarang.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormBarang.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormBarang.cs",
+              "RelativeToolTip": "Gudangin\\view\\FormBarang.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAkwK0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:17.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormBarang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormBarang.cs",
+              "RelativeDocumentMoniker": "Gudangin\\view\\FormBarang.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\view\\FormBarang.cs [Design]",
+              "RelativeToolTip": "Gudangin\\view\\FormBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:00:15.29Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\UserController.cs",
+              "RelativeDocumentMoniker": "Gudangin\\controller\\UserController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\UserController.cs",
+              "RelativeToolTip": "Gudangin\\controller\\UserController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAADUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:59:48.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BarangController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\BarangController.cs",
+              "RelativeDocumentMoniker": "Gudangin\\controller\\BarangController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Semester 3\\gudangin.github.io\\Gudangin\\Gudangin\\controller\\BarangController.cs",
+              "RelativeToolTip": "Gudangin\\controller\\BarangController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:56:18.394Z",
+              "EditorCaption": ""
             }
           ]
         }
