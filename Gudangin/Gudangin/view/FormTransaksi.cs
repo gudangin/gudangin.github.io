@@ -26,11 +26,6 @@ namespace Gudangin.view
             TampilTransaksi();
         }
 
-        private void FormTransaksi_Load(object sender, EventArgs e)
-        {
-            LoadBarang();
-        }
-
         private void TampilTransaksi()
         {
             DataTable dt = koneksi.ShowData("SELECT t_transaksi.id_transaksi, t_barang.nama_barang, t_transaksi.jenis_transaksi, t_transaksi.jumlah, t_transaksi.tanggal FROM t_transaksi JOIN t_barang ON t_transaksi.id_barang = t_barang.id");
@@ -59,9 +54,8 @@ namespace Gudangin.view
         {
             try
             {
-                comboBoxNamaBarang.Items.Clear(); // Hapus data sebelumnya
                 koneksi.OpenConnection();
-                MySqlDataReader reader = koneksi.reader("SELECT id, nama_barang FROM t_barang");
+                MySqlDataReader reader = koneksi.reader("SELECT * FROM t_barang");
 
                 if (reader.HasRows)
                 {
@@ -113,9 +107,9 @@ namespace Gudangin.view
             string Nama_barang = comboBoxNamaBarang.SelectedItem.ToString();
             int Jumlah;
 
-            if (!int.TryParse(tbJumlah.Text, out Jumlah))
+            if (!int.TryParse(tbJumlah.Text, out Jumlah) || Jumlah <= 0)
             {
-                MessageBox.Show("Jumlah harus berupa angka!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Jumlah harus berupa angka positif!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -123,12 +117,15 @@ namespace Gudangin.view
 
             // Cari ID Barang berdasarkan nama barang
             koneksi.OpenConnection();
-            MySqlDataReader reader = koneksi.reader($"SELECT id FROM t_barang WHERE nama_barang = '{Nama_barang}'");
+            MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{Nama_barang}'");
 
             int Id_barang = -1;
+            int stokSekarang = 0;
+
             if (reader.Read())
             {
                 Id_barang = reader.GetInt32("id");
+                stokSekarang = reader.GetInt32("stok");
             }
             reader.Close();
             koneksi.CloseConnection();
@@ -139,22 +136,12 @@ namespace Gudangin.view
                 return;
             }
 
-            // Query stok barang jika transaksi adalah "Keluar"
-            int stokSekarang = 0;
+            // Validasi stok barang jika transaksi keluar
             if (Jenis_transaksi == "Keluar")
             {
-                koneksi.OpenConnection();
-                reader = koneksi.reader($"SELECT stok FROM t_barang WHERE id = {Id_barang}");
-                if (reader.Read())
-                {
-                    stokSekarang = reader.GetInt32("stok");
-                }
-                reader.Close();
-                koneksi.CloseConnection();
-
                 if (Jumlah > stokSekarang)
                 {
-                    MessageBox.Show("Stok tidak mencukupi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Stok tidak mencukupi! Stok saat ini: {stokSekarang}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -167,7 +154,7 @@ namespace Gudangin.view
                 koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok + {Jumlah} WHERE id = {Id_barang}");
             }
 
-            // Simpan transaksi
+            // Simpan transaksi ke database
             m_transaksi.Id_barang = Id_barang.ToString();
             m_transaksi.Jenis_transaksi = Jenis_transaksi;
             m_transaksi.Jumlah = Jumlah.ToString();
@@ -235,6 +222,11 @@ namespace Gudangin.view
         {
             UserController userController = new UserController();
             userController.Logout(this);
+        }
+
+        private void FormTransaksi_Load(object sender, EventArgs e)
+        {
+            LoadBarang();
         }
     }
     }

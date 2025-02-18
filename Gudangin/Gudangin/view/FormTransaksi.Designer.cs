@@ -370,6 +370,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTransaksi";
             this.Text = "FormTransaksi";
+            this.Load += new System.EventHandler(this.FormTransaksi_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataTransaksi)).EndInit();
             this.panel1.ResumeLayout(false);
