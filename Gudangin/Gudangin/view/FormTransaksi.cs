@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Gudangin.view
 {
@@ -115,7 +116,7 @@ namespace Gudangin.view
 
             string tanggal = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
-            // Cari ID Barang berdasarkan nama barang
+            // Ambil data barang berdasarkan nama_barang
             koneksi.OpenConnection();
             MySqlDataReader reader = koneksi.reader($"SELECT id, stok FROM t_barang WHERE nama_barang = '{Nama_barang}'");
 
@@ -136,25 +137,16 @@ namespace Gudangin.view
                 return;
             }
 
-            // Validasi stok barang jika transaksi keluar
-            if (Jenis_transaksi == "Keluar")
-            {
-                if (Jumlah > stokSekarang)
-                {
-                    MessageBox.Show($"Stok tidak mencukupi! Stok saat ini: {stokSekarang}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            // **Cek stok sebelum transaksi**
+            MessageBox.Show($"Stok sebelum transaksi: {stokSekarang}", "Debug Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Kurangi stok barang
-                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok - {Jumlah} WHERE id = {Id_barang}");
-            }
-            else if (Jenis_transaksi == "Masuk")
+            if (Jenis_transaksi == "Keluar" && Jumlah > stokSekarang)
             {
-                // Tambah stok barang
-                koneksi.ExecuteQuery($"UPDATE t_barang SET stok = stok + {Jumlah} WHERE id = {Id_barang}");
+                MessageBox.Show($"Stok tidak mencukupi! Stok saat ini: {stokSekarang}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            // Simpan transaksi ke database
+            // Simpan transaksi ke database melalui TransaksiController
             m_transaksi.Id_barang = Id_barang.ToString();
             m_transaksi.Jenis_transaksi = Jenis_transaksi;
             m_transaksi.Jumlah = Jumlah.ToString();
@@ -165,8 +157,14 @@ namespace Gudangin.view
                 ResetForm();
                 TampilTransaksi();
             }
+            else
+            {
+                MessageBox.Show("Gagal menyimpan transaksi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-                private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxNamaBarang.SelectedItem != null)
             {
@@ -226,6 +224,38 @@ namespace Gudangin.view
         private void FormTransaksi_Load(object sender, EventArgs e)
         {
             LoadBarang();
+            LoadChartData();
+        }
+        private void LoadChartData()
+        {
+            chartTransaksi.Series.Clear(); // Hapus data lama
+
+            // Tambah Series
+            Series seriesMasuk = new Series("Masuk");
+            Series seriesKeluar = new Series("Keluar");
+
+            seriesMasuk.ChartType = SeriesChartType.Column; // Batang
+            seriesKeluar.ChartType = SeriesChartType.Column;
+
+            // Ambil data transaksi
+            DataTable dt = koneksi.ShowData("SELECT t_barang.nama_barang, " +
+                                            "SUM(CASE WHEN t_transaksi.jenis_transaksi = 'Masuk' THEN t_transaksi.jumlah ELSE 0 END) AS total_masuk, " +
+                                            "SUM(CASE WHEN t_transaksi.jenis_transaksi = 'Keluar' THEN t_transaksi.jumlah ELSE 0 END) AS total_keluar " +
+                                            "FROM t_transaksi JOIN t_barang ON t_transaksi.id_barang = t_barang.id " +
+                                            "GROUP BY t_barang.nama_barang");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string namaBarang = row["nama_barang"].ToString();
+                int totalMasuk = Convert.ToInt32(row["total_masuk"]);
+                int totalKeluar = Convert.ToInt32(row["total_keluar"]);
+
+                seriesMasuk.Points.AddXY(namaBarang, totalMasuk);
+                seriesKeluar.Points.AddXY(namaBarang, totalKeluar);
+            }
+
+            chartTransaksi.Series.Add(seriesMasuk);
+            chartTransaksi.Series.Add(seriesKeluar);
         }
     }
     }

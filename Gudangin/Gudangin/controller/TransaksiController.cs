@@ -29,12 +29,11 @@ namespace Gudangin.controller
                     if (stokSekarang < Convert.ToInt32(transaksi.Jumlah))
                     {
                         MessageBox.Show("Stok tidak mencukupi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        koneksi.CloseConnection();
-                        return false;
+                        return false; // Tidak perlu menutup koneksi di sini, karena kita masih akan menjalankan transaksi lain.
                     }
                 }
 
-                // Query Insert dengan parameterized query
+                // Insert transaksi ke database
                 string query = "INSERT INTO t_transaksi (id_barang, jenis_transaksi, jumlah, tanggal) " +
                                "VALUES (@id_barang, @jenis_transaksi, @jumlah, @tanggal)";
                 MySqlCommand cmd = new MySqlCommand(query, koneksi.kon);
@@ -44,27 +43,21 @@ namespace Gudangin.controller
                 cmd.Parameters.AddWithValue("@tanggal", transaksi.Tanggal);
                 cmd.ExecuteNonQuery();
 
-                // Update stok di t_barang jika transaksi masuk atau keluar
-                if (transaksi.Jenis_transaksi == "Masuk")
-                {
-                    string updateQuery = "UPDATE t_barang SET stok = stok + @jumlah WHERE id = @id_barang";
-                    MySqlCommand updateCmd = new MySqlCommand(updateQuery, koneksi.kon);
-                    updateCmd.Parameters.AddWithValue("@jumlah", transaksi.Jumlah);
-                    updateCmd.Parameters.AddWithValue("@id_barang", transaksi.Id_barang);
-                    updateCmd.ExecuteNonQuery();
-                }
-                else if (transaksi.Jenis_transaksi == "Keluar")
-                {
-                    string updateQuery = "UPDATE t_barang SET stok = stok - @jumlah WHERE id = @id_barang";
-                    MySqlCommand updateCmd = new MySqlCommand(updateQuery, koneksi.kon);
-                    updateCmd.Parameters.AddWithValue("@jumlah", transaksi.Jumlah);
-                    updateCmd.Parameters.AddWithValue("@id_barang", transaksi.Id_barang);
-                    updateCmd.ExecuteNonQuery();
-                }
+                // Update stok di t_barang
+                string updateQuery = transaksi.Jenis_transaksi == "Masuk"
+                    ? "UPDATE t_barang SET stok = stok + @jumlah WHERE id = @id_barang"
+                    : "UPDATE t_barang SET stok = stok - @jumlah WHERE id = @id_barang";
+
+                MySqlCommand updateCmd = new MySqlCommand(updateQuery, koneksi.kon);
+                updateCmd.Parameters.AddWithValue("@jumlah", transaksi.Jumlah);
+                updateCmd.Parameters.AddWithValue("@id_barang", transaksi.Id_barang);
+                updateCmd.ExecuteNonQuery();
+
+                // Tutup koneksi hanya setelah semua query selesai
+                koneksi.CloseConnection();
 
                 status = true;
                 MessageBox.Show("Transaksi berhasil ditambahkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                koneksi.CloseConnection();
             }
             catch (Exception e)
             {
@@ -73,6 +66,7 @@ namespace Gudangin.controller
             }
             return status;
         }
+
 
         // Update Data Transaksi
         public bool Update(Transaksi transaksi, string id)

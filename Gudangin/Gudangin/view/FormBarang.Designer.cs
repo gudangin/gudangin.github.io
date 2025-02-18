@@ -196,6 +196,7 @@
             this.panelDataBarang.Name = "panelDataBarang";
             this.panelDataBarang.Size = new System.Drawing.Size(760, 574);
             this.panelDataBarang.TabIndex = 2;
+            this.panelDataBarang.TabStop = true;
             // 
             // groupBoxSearch
             // 

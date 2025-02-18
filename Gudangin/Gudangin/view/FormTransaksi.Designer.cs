@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DataTransaksi = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +56,7 @@
             this.tbJumlah = new System.Windows.Forms.TextBox();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chartTransaksi = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTransaksi)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,6 +64,7 @@
             this.panel2.SuspendLayout();
             this.groupBoxSearch.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTransaksi)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -270,7 +275,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(393, 41);
+            this.label3.Location = new System.Drawing.Point(272, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 3;
@@ -280,7 +285,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(393, 87);
+            this.label4.Location = new System.Drawing.Point(272, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 4;
@@ -295,7 +300,7 @@
             this.comboBoxJenisTransaksi.Location = new System.Drawing.Point(140, 39);
             this.comboBoxJenisTransaksi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJenisTransaksi.Name = "comboBoxJenisTransaksi";
-            this.comboBoxJenisTransaksi.Size = new System.Drawing.Size(209, 24);
+            this.comboBoxJenisTransaksi.Size = new System.Drawing.Size(120, 24);
             this.comboBoxJenisTransaksi.TabIndex = 5;
             // 
             // comboBoxNamaBarang
@@ -304,30 +309,30 @@
             this.comboBoxNamaBarang.Location = new System.Drawing.Point(140, 81);
             this.comboBoxNamaBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxNamaBarang.Name = "comboBoxNamaBarang";
-            this.comboBoxNamaBarang.Size = new System.Drawing.Size(209, 24);
+            this.comboBoxNamaBarang.Size = new System.Drawing.Size(120, 24);
             this.comboBoxNamaBarang.TabIndex = 6;
             this.comboBoxNamaBarang.SelectedIndexChanged += new System.EventHandler(this.comboBoxNamaBarang_SelectedIndexChanged);
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(492, 41);
+            this.dateTimePicker.Location = new System.Drawing.Point(344, 41);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(209, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(124, 22);
             this.dateTimePicker.TabIndex = 7;
             // 
             // tbJumlah
             // 
-            this.tbJumlah.Location = new System.Drawing.Point(492, 82);
+            this.tbJumlah.Location = new System.Drawing.Point(344, 82);
             this.tbJumlah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbJumlah.Name = "tbJumlah";
-            this.tbJumlah.Size = new System.Drawing.Size(209, 22);
+            this.tbJumlah.Size = new System.Drawing.Size(124, 22);
             this.tbJumlah.TabIndex = 8;
             // 
             // btnSimpan
             // 
             this.btnSimpan.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimpan.Location = new System.Drawing.Point(325, 142);
+            this.btnSimpan.Location = new System.Drawing.Point(221, 132);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(84, 28);
@@ -347,20 +352,37 @@
             this.groupBox2.Controls.Add(this.comboBoxJenisTransaksi);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(216, 374);
+            this.groupBox2.Location = new System.Drawing.Point(216, 425);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(732, 229);
+            this.groupBox2.Size = new System.Drawing.Size(477, 178);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data Transaksi";
+            // 
+            // chartTransaksi
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartTransaksi.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTransaksi.Legends.Add(legend1);
+            this.chartTransaksi.Location = new System.Drawing.Point(716, 370);
+            this.chartTransaksi.Name = "chartTransaksi";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTransaksi.Series.Add(series1);
+            this.chartTransaksi.Size = new System.Drawing.Size(225, 233);
+            this.chartTransaksi.TabIndex = 19;
+            this.chartTransaksi.Text = "chart1";
             // 
             // FormTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 615);
+            this.Controls.Add(this.chartTransaksi);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -381,6 +403,7 @@
             this.groupBoxSearch.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTransaksi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,5 +435,6 @@
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTransaksi;
     }
 }

@@ -45,20 +45,23 @@ namespace Gudangin.controller
             }
         }
 
-        public void ExecuteQuery(string query)
+        public int ExecuteQuery(string query)
         {
             try
             {
                 OpenConnection();
                 MySqlCommand command = new MySqlCommand(query, kon);
-                command.ExecuteNonQuery();
+                int affectedRows = command.ExecuteNonQuery();
                 CloseConnection();
+                return affectedRows;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Kesalahan Eksekusi Query!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
         }
+
 
         public DataTable ShowData(string query)
         {
