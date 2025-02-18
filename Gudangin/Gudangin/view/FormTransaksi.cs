@@ -166,8 +166,7 @@ namespace Gudangin.view
                 TampilTransaksi();
             }
         }
-
-        private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
+                private void comboBoxNamaBarang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxNamaBarang.SelectedItem != null)
             {

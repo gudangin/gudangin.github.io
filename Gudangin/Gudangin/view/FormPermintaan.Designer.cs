@@ -192,6 +192,7 @@
             this.buttonBarang.TabIndex = 0;
             this.buttonBarang.Text = "Barang";
             this.buttonBarang.UseVisualStyleBackColor = true;
+            this.buttonBarang.Click += new System.EventHandler(this.buttonBarang_Click);
             // 
             // panelStats
             // 
@@ -244,6 +245,7 @@
             this.buttonTransaksi.TabIndex = 1;
             this.buttonTransaksi.Text = "Transaksi";
             this.buttonTransaksi.UseVisualStyleBackColor = true;
+            this.buttonTransaksi.Click += new System.EventHandler(this.buttonTransaksi_Click);
             // 
             // panel1
             // 

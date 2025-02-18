@@ -119,5 +119,25 @@ namespace Gudangin.view
             UserController userController = new UserController();
             userController.Logout(this);
         }
+
+        private void buttonTransaksi_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            FormTransaksi formTransaksi = new FormTransaksi();
+            formTransaksi.ShowDialog();
+            this.Close();
+        }
+
+        private void buttonBarang_Click(object sender, EventArgs e)
+        {
+          
+            
+            this.Hide();
+            FormBarang formBarang = new FormBarang();
+            formBarang.ShowDialog();
+            this.Close();
+
+        }
     }
 }

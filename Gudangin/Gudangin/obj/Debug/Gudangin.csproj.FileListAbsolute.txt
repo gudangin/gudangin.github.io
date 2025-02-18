@@ -176,3 +176,5 @@ C:\Users\Lenovo\Documents\Semester 3\gudangin.github.io\Gudangin\Gudangin\obj\De
 C:\Users\Lenovo\Documents\Semester 3\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.csproj.Up2Date
 C:\Users\Lenovo\Documents\Semester 3\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.exe
 C:\Users\Lenovo\Documents\Semester 3\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.pdb
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormPermintaan.resources
+D:\kuliah\Semester3\Programming II\Source\Repos\Tubes\gudangin.github.io\Gudangin\Gudangin\obj\Debug\Gudangin.view.FormPesanan.resources
